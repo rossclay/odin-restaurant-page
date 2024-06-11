@@ -1,0 +1,59 @@
+:root {
+    --card-size: 500px;
+    --site-background-color: #2196F3;
+    --card-background-color: #e5e5e5;
+    --card-font-color: #3f3f46;
+    --card-border-radius: 4px;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+header {
+    background-color: var(--site-background-color);
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    width: 50%;
+    gap: 10vh;
+}
+
+.card {
+    background-color: var(--card-background-color);
+    color: var(--card-font-color);
+    border-radius: var(--card-border-radius);
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    padding: 5%;
+    gap: 10px;
+    width: 30vw;
+}
+
+.card-header {
+    align-self: flex-start;
+}
