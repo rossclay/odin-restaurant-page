@@ -1,20 +1,33 @@
+@font-face {
+    font-family: 'Lilita One';
+    src: url('./LilitaOne-Regular.ttf') format('ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
 :root {
     --card-size: 500px;
-    --site-background-color: #2196F3;
-    --card-background-color: #e5e5e5;
-    --card-font-color: #3f3f46;
+    --nav-color: #003049;
+    --site-background-color: #D62828;
+    --card-background-color: #FCBF49;
+    --font-color: #eae2b7;
+    --active-btn-color: #D62828;
+    --hidden-btn-color: #F77F00;
     --card-border-radius: 4px;
+    color: var(--font-color);
+    font-family: 'Lilita One';
 }
 
 body {
     margin: 0;
     display: flex;
     flex-direction: column;
+    background-color: var(--site-background-color);
     gap: 2vh;
 }
 
 header {
-    background-color: var(--site-background-color);
+    background-color: var(--nav-color);
     height: 5vh;
     display: flex;
     justify-content: center;
@@ -26,6 +39,18 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 1vw;
+}
+
+.nav-btn {
+    color: var(--nav-color);
+    background-color: var(--active-btn-color);
+    border: none;
+}
+
+
+
+.hidden {
+    background-color: var(--hidden-btn-color);
 }
 
 #content {
