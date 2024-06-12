@@ -5,17 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurant Page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
         <nav>
-            <button>Home</button>
-            <button>About</button>
-            <button>Menu</button>
+            <button id="home" class="nav-btn">Home</button>
+            <button id="about" class="nav-btn hidden">About</button>
+            <button id="menu" class="nav-btn hidden">Menu</button>
         </nav>
     </header>
-    <div id="content"></div>
+    <div id="content">
+        <div class="content-header">
+            Name of Restaurant
+        </div>
+        <div class="card">
+            <div class="card-header">
+                Testimonial
+            </div>
+            <div class="card-content">
+                Wow, here I am, testifying to how good this place is. I would come here again! And I'd recommend it to
+                others! Which is what I'm doing here. So, here it is. My Testimonial.
+            </div>
+            <div class="card-footer">-The Testifier</div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                Hours
+            </div>
+            <div class="card-content">
+                <ul>Sunday: 8am - 8pm</ul>
+                <ul>Monday: 6am - 6pm</ul>
+                <ul>Tuesday: 6am - 6pm</ul>
+                <ul>Wednesday: 6am - 6pm</ul>
+                <ul>Thursday: 6am - 10pm</ul>
+                <ul>Friday: 6am - 10pm</ul>
+                <ul>Saturday: 8am - 10pm</ul>
+            </div>
+            <div class="card-footer"></div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                Location
+            </div>
+            <div class="card-content">
+                456 Fraudulent Parkway, Fakeville, Georgia
+            </div>
+            <div class="card-footer"></div>
+        </div>
 </body>
 
 </html>
