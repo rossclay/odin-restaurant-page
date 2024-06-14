@@ -1,19 +1,22 @@
 @font-face {
     font-family: 'Lilita One';
-    src: url('./LilitaOne-Regular.ttf') format('ttf');
-    font-weight: 600;
+    src: url('./LilitaOne-Regular.ttf') format('truetype');
+    font-weight: 900;
     font-style: normal;
 }
 
 :root {
     --card-size: 500px;
     --nav-color: #003049;
-    --site-background-color: #D62828;
-    --card-background-color: #FCBF49;
-    --font-color: #eae2b7;
+    --site-background-color: #eae2b7;
+    --card-background-color: #F77F00;
+    --font-color: rgb(249, 234, 209);
+    --content-header-font-color: #F77F00;
     --active-btn-color: #D62828;
-    --hidden-btn-color: #F77F00;
+    --hidden-btn-color: #FCBF49;
     --card-border-radius: 4px;
+    --card-width: 30vw;
+    --sub-header-width: calc(var(--card-width) *0.75);
     color: var(--font-color);
     font-family: 'Lilita One';
 }
@@ -28,7 +31,7 @@ body {
 
 header {
     background-color: var(--nav-color);
-    height: 5vh;
+    height: 7.5vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,12 +45,14 @@ nav {
 }
 
 .nav-btn {
-    color: var(--nav-color);
+    font-family: 'Lilita One';
+    color: var(--font-color);
     background-color: var(--active-btn-color);
     border: none;
+    border-radius: var(--card-border-radius);
+    padding: 1vh;
+    cursor: pointer;
 }
-
-
 
 .hidden {
     background-color: var(--hidden-btn-color);
@@ -64,21 +69,53 @@ nav {
     gap: 10vh;
 }
 
-.card {
-    background-color: var(--card-background-color);
-    color: var(--card-font-color);
-    border-radius: var(--card-border-radius);
+.content-header {
+    color: var(--content-header-font-color);
+    font-size: 2.5rem;
+}
+
+
+.card,
+.sub-header {
     display: flex;
     align-self: center;
     align-items: center;
     justify-content: center;
     justify-items: center;
-    flex-direction: column;
-    padding: 5%;
+    background-color: var(--card-background-color);
+    color: var(--card-font-color);
+    border-radius: var(--card-border-radius);
     gap: 10px;
-    width: 30vw;
+    padding: 10px;
 }
+
+.sub-header {
+    font-size: 1.75rem;
+    width: var(--sub-header-width);
+}
+
+.card {
+    flex-direction: column;
+    width: var(--card-width);
+    font-size: 1.5rem;
+    padding: 5%;
+}
+
 
 .card-header {
     align-self: flex-start;
+}
+
+img {
+    width: 60%;
+}
+
+footer {
+    color: var(--active-btn-color);
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
 }
