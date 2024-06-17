@@ -106,8 +106,12 @@ nav {
     align-self: flex-start;
 }
 
-img {
+.contact-img {
     width: 60%;
+}
+
+.menu-img {
+    height: 10rem;
 }
 
 footer {
