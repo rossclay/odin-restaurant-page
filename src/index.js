@@ -3,29 +3,57 @@ import { createMenuDOM } from './menu';
 import { createHomeDOM } from './create';
 import { createContactDOM } from './contact';
 
-// createHomeDOM()
-
-// createContactDOM()
-
-createMenuDOM()
-
-console.log(`i'm doing something!`)
-console.log(`and again!`)
+createHomeDOM()
+let currentPage = 'Home'
 
 const navBtns = document.querySelectorAll('.nav-btn')
+const homeBtn = document.getElementById('home')
+const menuBtn = document.getElementById('menu')
+const contactBtn = document.getElementById('contact')
+const content = document.getElementById('content')
 
-let currentPage
+function clearPage() {
+    content.innerHTML = '';
+    const contentHeader = document.createElement('div')
+    contentHeader.classList.add('content-header')
+    content.appendChild(contentHeader)
+}
+
+function handleClick(e) {
+    const targetPageId = e.target.id
+    updatePage(targetPageId)
+}
 
 
-// function handleClick(e) {
-//     const targetPage = e.target
+function updatePage(page) {
+    if (page === currentPage) {
+        // do nothing.
+    }
 
-//     updatePage(targetPage)
-// }
+    else if (page === 'menu') {
+        clearPage()
+        createMenuDOM()
+        homeBtn.classList.add('hidden')
+        contactBtn.classList.add('hidden')
+        menuBtn.classList.remove('hidden')
+    }
 
+    else if (page === 'contact') {
+        clearPage()
+        createContactDOM()
+        homeBtn.classList.add('hidden')
+        contactBtn.classList.remove('hidden')
+        menuBtn.classList.add('hidden')
+    }
 
-// function updatePage(pageOption) {
+    else if (page === 'home') {
+        clearPage()
+        createHomeDOM()
+        homeBtn.classList.remove('hidden')
+        contactBtn.classList.add('hidden')
+        menuBtn.classList.add('hidden')
+    }
 
-// }
+}
 
-// navBtns.forEach((navBtn) => navBtn.addEventListener('click', handleClick))
+navBtns.forEach((navBtn) => navBtn.addEventListener('click', handleClick))
