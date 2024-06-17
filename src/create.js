@@ -1,3 +1,5 @@
+import AtlantaImage from './img/State-Farm-Arena.jpg'
+
 function createHomeDOM() {
     // update header
     const content = document.getElementById('content')
@@ -76,6 +78,10 @@ function createHomeDOM() {
     locationHeader.textContent = 'Location'
     locationHeader.classList.add('card-header')
     location.appendChild(locationHeader)
+    const locationImg = new Image()
+    locationImg.src = AtlantaImage
+    locationImg.classList.add('contact-img')
+    location.appendChild(locationImg)
     const locationContent = document.createElement('div')
     locationContent.textContent = '456 Fraudulent Parkway, Fakeville, Georgia'
     locationContent.classList.add('card-content')
