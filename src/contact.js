@@ -27,6 +27,7 @@ function createContactDOM() {
                         case 0:
                             const img = new Image()
                             img.src = AtlantaImage
+                            img.classList.add('contact-img')
                             contactUL.appendChild(img)
                             locationContent.appendChild(contactUL)
                             break;
@@ -54,6 +55,7 @@ function createContactDOM() {
                         case 0:
                             const img = new Image()
                             img.src = NewYorkImage
+                            img.classList.add('contact-img')
                             contactUL.appendChild(img)
                             locationContent.appendChild(contactUL)
                             break;
@@ -81,6 +83,7 @@ function createContactDOM() {
                         case 0:
                             const img = new Image()
                             img.src = LosAngelesImage
+                            img.classList.add('contact-img')
                             contactUL.appendChild(img)
                             locationContent.appendChild(contactUL)
                             break;
